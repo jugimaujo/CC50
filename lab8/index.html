@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>
+                
+            // TODO: Add code to check answers to question
+            
+            document.addEventListener("DOMContentLoaded", function(event){
+                let feedback = document.querySelector("#fb");
+                
+                let w1 = document.querySelector("#w1");
+                let w2 = document.querySelector("#w2");
+                let w3 = document.querySelector("#w3");
+                let w4 = document.querySelector("#w4");
+                w1.addEventListener("click", function(event){
+                    w1.style = "background-color: red; color:white;";
+                    feedback.innerHTML = "Incorrect";
+                });
+                w2.addEventListener("click", function(event){
+                    w2.style = "background-color: red; color:white;";
+                    feedback.innerHTML = "Incorrect";
+                });
+                w3.addEventListener("click", function(event){
+                    w3.style = "background-color: red; color:white;";
+                    feedback.innerHTML = "Incorrect";
+                });
+                w4.addEventListener("click", function(event){
+                    w4.style = "background-color: red; color:white;";
+                    feedback.innerHTML = "Incorrect";
+                });
+                
+                let r = document.querySelector("#r");
+                r.addEventListener("click", function(event){
+                    r.style = "background-color: green; color:white;";
+                    feedback.innerHTML = "Correct!";
+                });
+                
+                let feedback2 = document.querySelector("#fb2");
+                var answer = document.querySelector("input");
+                let a = ["Bat", "bat", "Morcego", "morcego"];
+                document.querySelector("#check").addEventListener("click", function(event){
+                    for (i = 0;i < 4; i++){
+                        if (answer.value == a[i]){
+                            feedback2.innerHTML = "Correct!";
+                            break;
+                        }
+                        else{
+                            feedback2.innerHTML = "Incorrect";
+                        }
+                    }
+                });
+                });
+
+        </script>
+
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>Which is the world's tallest nation?</h3>
+                <p id="fb"></p>
+
+                <!-- TODO: Add multiple choice question here -->
+                <button id="w1">Russia</button>
+                <button id="w2">Japan</button>
+                <button id="r">Netherlands</button>
+                <button id="w3">Montenegro</button>
+                <button id="w4">Nigeria</button>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>Which is the only mammal capable of flying?</h3>
+                <p id="fb2"></p>
+
+                <!-- TODO: Add free response question here -->
+                <input type="text">
+                <button id="check">Check answer</button>
+
+            </div>
+
+        </div>
+    </body>
+</html>
