@@ -1,0 +1,20 @@
+.center
+{
+    text-align:center;
+}
+.large
+{
+    font-size:xx-large;
+}
+.small
+{
+    font-size:small;
+}
+footer
+{
+    color:blue;
+}
+body{
+    padding:50;
+    margin:100;
+}
